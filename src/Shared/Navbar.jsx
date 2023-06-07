@@ -11,7 +11,7 @@ const Navbar = () => {
                     isActive
                         ? "text-primary"
                         : isPending
-                            ? "text-black"
+                            ? "text-secondary"
                             : ""
                 }
             >
@@ -25,7 +25,7 @@ const Navbar = () => {
                     isActive
                         ? "text-primary"
                         : isPending
-                            ? "text-black"
+                            ? "text-secondary"
                             : ""
                 }
             >
@@ -39,7 +39,7 @@ const Navbar = () => {
                     isActive
                         ? "text-primary"
                         : isPending
-                            ? "text-black"
+                            ? "text-secondary"
                             : ""
                 }
             >
@@ -53,7 +53,7 @@ const Navbar = () => {
                     isActive
                         ? "text-primary"
                         : isPending
-                            ? "text-black"
+                            ? "text-secondary"
                             : ""
                 }
             >
@@ -76,7 +76,7 @@ const Navbar = () => {
                     <Link to='/' className="normal-case text-xl">
                         <div className='flex justify-center items-center'>
                             <img width='100' height='100' src="https://i.ibb.co/FbFzwxM/4425949-2411-removebg-preview.png" alt="" />
-                            <p className='text-3xl font-bold'>Martial Arts Quest</p>
+                            <p className='text-3xl text-secondary font-bold'>Martial Arts Quest</p>
                         </div>
                     </Link>
                 </div>
