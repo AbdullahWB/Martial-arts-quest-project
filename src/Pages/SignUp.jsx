@@ -18,19 +18,42 @@ const SignUp = () => {
 
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
+        const image = data.photo[0]
+
+        const formData = new FormData()
+        formData.append('image', image)
+
+        const url = `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_IMGBB_KEY}`
+
         if (data.password !== data.confirm) {
             toast.error('your password is not match ⚠️')
             return
         } else {
-            createUser(data.email, data.password)
-                .then(result => {
-                    console.log(result.user);
-                    toast.success('successfully Logged in ✅')
-                    reset()
-                    navigate(from, { replace: true })
-                })
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+            }).then(res => res.json()).then(imageData => {
+                const imageUrl = imageData.data.display_url
+                createUser(data.email, data.password)
+                    .then(result => {
+                        console.log(result.user);
+                        updateUserProfile(data.name, imageUrl)
+                            .then(() => {
+                                toast.success("User Created Successfully")
+                                navigate(from, { replace: true })
+                            })
+                            .catch(err => {
+                                toast.error(err.message);
+                            })
+                        navigate(from, { replace: true })
+                    })
+                    .catch(err => {
+                        toast.error(err.message);
+                    })
+            })
                 .catch(err => {
-                    toast.error(err.message);
+                    console.log(err.message);
+                    toast.error(err.message)
                 })
         }
         console.log(data)
@@ -149,6 +172,7 @@ const SignUp = () => {
                                 <input type="text" {...register("address", { required: true })} placeholder="Address Here" className="input input-bordered w-full rounded-full border-primary" />
                                 {errors.address && <span className='text-xs ml-3 text-red-500'>Address is required</span>}
                             </div>
+
                             <div className='grid grid-cols-2 gap-10'>
                                 <div className="form-control">
                                     <label className="label cursor-pointer gap-2">
