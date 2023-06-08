@@ -1,0 +1,25 @@
+.swiper-button-prev{
+    color: #fff;
+    background-color: #FF4746;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.swiper-button-next{
+    color: #fff;
+    background-color: #FF4746;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.swiper-pagination-bullet-active{
+    background-color: #FF4746;
+}
