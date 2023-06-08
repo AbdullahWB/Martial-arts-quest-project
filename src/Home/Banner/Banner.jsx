@@ -183,10 +183,10 @@ const Banner = () => {
                         <div className="absolute inset-0  flex items-center h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                             <div className='space-y-7 w-1/2 ml-20 text-white'>
                                 <h1 className='md:text-7xl font-bold text-white text-3xl '>
-                                    Unlock Your Potential with Martial Arts Training
+                                    Experience Martial Arts Excellence and Unleash Your True Potential
                                 </h1>
                                 <p className='pr-[30%] hidden md:flex'>
-                                    Welcome to our martial arts school, where discipline, focus, and self-improvement are at the core of our training. Whether you are a beginner looking to develop self-defense skills or an experienced practitioner seeking to enhance your martial arts journey, our dedicated instructors are here to guide you every step of the way. Through our comprehensive training programs, you will learn traditional techniques, build physical strength, cultivate mental resilience, and gain invaluable life skills. Join our martial arts community and embark on a transformative journey of personal growth and empowerment. Start your martial arts training today!
+                                    Welcome to our martial arts school, where excellence is the standard. Our world-class instructors are dedicated to providing unparalleled martial arts training. Whether you're a beginner or an experienced practitioner, our structured curriculum and personalized instruction will help you unlock your true potential. From mastering techniques to cultivating mental resilience and honing your competitive spirit, our academy offers a comprehensive martial arts experience that will elevate your skills to new heights.
                                 </p>
                                 <div>
                                     <Link className='btn btn-primary mr-5 rounded-full hover:bg-transparent border-2 border-primary hover:text-primary mb-5 px-[30px]'>Enroll Now</Link>

@@ -1,0 +1,80 @@
+[
+    {
+        "instructorId": 1,
+        "image": "https://i.ibb.co/PzQh4Yq/angry-serious-man-white-shirt-is-ready-fight-while-posing-photographer-dark-background.jpg",
+        "name": "John Smith",
+        "email": "johnsmith@example.com",
+        "classesTaken": 3,
+        "classes": [
+            "Karate",
+            "Taekwondo",
+            "Muay Thai"
+        ],
+        "description": "Sensei John Smith is a highly experienced martial arts instructor with a black belt in Karate. With over 10 years of teaching experience, he brings a wealth of knowledge and expertise to his classes. He is passionate about helping students develop discipline, confidence, and self-defense skills through the practice of martial arts."
+    },
+    {
+        "instructorId": 2,
+        "image": "https://i.ibb.co/HrccDjG/young-judo-fighter-kimono-posing-comfident-gym-strong-healthy.jpg",
+        "name": "Emily Johnson",
+        "email": "emilyjohnson@example.com",
+        "classesTaken": 4,
+        "classes": [
+            "Brazilian Jiu-Jitsu",
+            "Kickboxing",
+            "Self-Defense",
+            "Krav Maga"
+        ],
+        "description": "Sensei Emily Johnson is a dedicated martial arts instructor specializing in Brazilian Jiu-Jitsu. She holds multiple championship titles and has trained extensively in various combat styles. Her classes focus on technique, strategy, and physical fitness, empowering students to become skilled martial artists while fostering a supportive and inclusive training environment."
+    },
+    {
+        "instructorId": 3,
+        "image": "https://i.ibb.co/0ZFgRC3/female-karate-fighter-performing.jpg",
+        "name": "David Lee",
+        "email": "davidlee@example.com",
+        "classesTaken": 2,
+        "classes": [
+            "Kung Fu",
+            "Tai Chi"
+        ],
+        "description": "Sifu David Lee is a highly respected martial arts instructor known for his expertise in Kung Fu and Tai Chi. With a deep understanding of Chinese martial arts philosophy, he emphasizes the integration of mind, body, and spirit in his classes. His teachings promote inner peace, mindfulness, and physical well-being."
+    },
+    {
+        "instructorId": 4,
+        "image": "https://i.ibb.co/X2MVBQq/beautiful-woman-kimono-greeting-white.jpg",
+        "name": "Sarah Thompson",
+        "email": "sarahthompson@example.com",
+        "classesTaken": 5,
+        "classes": [
+            "Boxing",
+            "Krav Maga",
+            "Fitness Kickboxing",
+            "Cardio Combat"
+        ],
+        "description": "Coach Sarah Thompson is a dynamic instructor with a diverse background in combat sports and fitness. Her classes focus on high-intensity training, incorporating elements of boxing, Krav Maga, and kickboxing. With her energetic approach and motivational coaching style, she helps students improve their endurance, strength, and overall fitness level."
+    },
+    {
+        "instructorId": 5,
+        "image": "https://i.ibb.co/hFzKkJ2/karate-player-performing-karate-stance.jpg",
+        "name": "Michael Davis",
+        "email": "michaeldavis@example.com",
+        "classesTaken": 3,
+        "classes": [
+            "MMA",
+            "Wrestling",
+            "Conditioning"
+        ],
+        "description": "Coach Michael Davis is a seasoned martial artist and former professional MMA fighter. His classes encompass a mix of martial arts techniques, wrestling fundamentals, and strength and conditioning training. With a focus on technique, strategy, and physical fitness, he prepares students for both competition and self-defense scenarios."
+    },
+    {
+        "instructorId": 6,
+        "image": "https://i.ibb.co/nCq4dRd/medium-shot-woman-fighter.jpg",
+        "name": "Jessica Martinez",
+        "email": "jessicamartinez@example.com",
+        "classesTaken": 2,
+        "classes": [
+            "Capoeira",
+            "Samba"
+        ],
+        "description": "Professor Jessica Martinez is a passionate instructor specializing in Capoeira, a Brazilian martial art combining elements of dance, acrobatics, and music. Her classes promote creativity, coordination, and cultural awareness. Through the rhythmic movements of Capoeira, she encourages students to express themselves while developing strength, agility, and flexibility."
+    }
+]
