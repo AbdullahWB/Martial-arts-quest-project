@@ -71,7 +71,7 @@ const Login = () => {
             </Helmet>
             <div className='grid grid-cols-1 md:grid-cols-2 mx-auto mb-[150px] mt-[50px]'>
                 <div className='flex justify-center items-center'>
-                    <div className='bg-primary w-[700px] h-[800px] flex justify-center items-center rounded-b-full' style={{
+                    <div className='bg-primary w-[700px] hidden h-[800px] md:flex justify-center items-center rounded-b-full' style={{
                         backgroundImage: 'url("https://themeim.com/wp/sword/wp-content/uploads/2022/02/element-13.png")',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat'

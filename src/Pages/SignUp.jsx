@@ -91,7 +91,7 @@ const SignUp = () => {
                             <h1 className='my-3 text-4xl font-bold'>Sign Up</h1>
                             <p className='text-sm text-gray-400'>Welcome to Martial Arts Quest</p>
                         </div>
-                        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-center items-center gap-3 mb-10'>
+                        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-center items-center gap-3 mb-10 px-5 md:px-0'>
                             <div className="form-control w-full">
                                 <label className="label">
                                     <span className="label-text">Your Name</span>

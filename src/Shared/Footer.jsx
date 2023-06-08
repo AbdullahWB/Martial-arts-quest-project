@@ -9,11 +9,11 @@ const Footer = () => {
             <Container>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-32'>
                     <div className=''>
-                        <h1 className='text-6xl text-white font-bold mb-10'>Subscribe To Our Newsletter</h1>
+                        <h1 className='md:text-6xl text-4xl text-white font-bold mb-10'>Subscribe To Our Newsletter</h1>
                         <p className='text-xl text-[#b3b3b3] pr-[30%] tracking-wider'>Don't miss out on this opportunity to stay connected with our vibrant martial arts community. Subscribe to our newsletter today and be part of an amazing network of like-minded individuals passionate about martial arts, personal growth, and unforgettable summer experiences.</p>
                     </div>
                     <div className=''>
-                        <div className="card w-full bg-white px-32 py-10 text-neutral-content">
+                        <div className="card w-full bg-white md:px-32 md:py-10 text-neutral-content">
                             <div className="card-body items-center text-center">
                                 <input type="text" placeholder="Your Email" className="input input-bordered w-full rounded-full shadow-xl" />
                                 <input type="submit" value="Subscribe Now" className="input input-bordered w-full rounded-full bg-primary text-white font-medium text-xl mt-5" />
@@ -24,7 +24,7 @@ const Footer = () => {
                 <div className='grid md:grid-cols-5 grid-cols-1 gap-8 text-white mb-32'>
                     <div className='flex flex-col gap-4'>
                         <Link to='/' className="normal-case text-xl">
-                            <div className='flex flex-row'>
+                            <div className='flex md:flex-row items-center'>
                                 <img width='100' height='100' src="https://i.ibb.co/FbFzwxM/4425949-2411-removebg-preview.png" alt="" />
                                 <p className='text-3xl font-bold text-white'>Martial Arts Quest</p>
                             </div>
