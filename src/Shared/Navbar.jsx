@@ -82,10 +82,16 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <Link to='/' className="normal-case text-xl mb-4">
+                                <div className='flex justify-center items-center'>
+                                    <img width='70' height='70' src="https://i.ibb.co/FbFzwxM/4425949-2411-removebg-preview.png" alt="" />
+                                    <p className='text-xs text-secondary font-bold'>Martial Arts Quest</p>
+                                </div>
+                            </Link>
                             {navigation}
                         </ul>
                     </div>
-                    <Link to='/' className="normal-case text-xl">
+                    <Link to='/' className="normal-case text-xl hidden md:flex">
                         <div className='flex justify-center items-center'>
                             <img width='100' height='100' src="https://i.ibb.co/FbFzwxM/4425949-2411-removebg-preview.png" alt="" />
                             <p className='text-3xl text-secondary font-bold'>Martial Arts Quest</p>
