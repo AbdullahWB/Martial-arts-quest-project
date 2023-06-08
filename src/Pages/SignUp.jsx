@@ -6,6 +6,7 @@ import { AuthContext } from '../Provider/Authprovider';
 import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 import { toast } from 'react-hot-toast';
+import { saveUser } from '../api/auth';
 
 const SignUp = () => {
     const [show, setShow] = useState(false)
@@ -40,6 +41,7 @@ const SignUp = () => {
                         updateUserProfile(data.name, imageUrl)
                             .then(() => {
                                 toast.success("User Created Successfully")
+                                saveUser(result.user)
                                 navigate(from, { replace: true })
                             })
                             .catch(err => {
@@ -65,6 +67,7 @@ const SignUp = () => {
                 console.log(result.user);
                 saveUser(result.user)
                 toast.success('successfully Logged in ✅')
+                saveUser(result.user)
                 navigate(from, { replace: true })
             })
             .catch(err => {

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Container from './Container';
 import { Link, NavLink } from 'react-router-dom';
+import avatar from '../assets/placeholder.jpg';
 import { AuthContext } from '../Provider/Authprovider';
 
 const Navbar = () => {

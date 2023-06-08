@@ -6,6 +6,7 @@ import { AuthContext } from '../Provider/Authprovider';
 import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 import { toast } from 'react-hot-toast';
+import { saveUser } from '../api/auth';
 
 const Login = () => {
     const [show, setShow] = useState(false)
@@ -22,6 +23,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success('successfully Logged in ✅')
+                saveUser(result.user)
                 reset()
                 navigate(from, { replace: true })
             })
