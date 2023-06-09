@@ -16,7 +16,7 @@ const AllClass = () => {
     }, [])
 
     return (
-        <div>
+        <div className='mt-[50px] mb-[150px]'>
             <Container>
                 <Title
                     extraTitle={"Our Program"}
