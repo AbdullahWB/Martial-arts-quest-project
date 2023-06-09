@@ -5,6 +5,7 @@ import { FcSettings } from 'react-icons/fc'
 import { AiOutlineBars } from 'react-icons/ai'
 import { BsFillHouseAddFill } from 'react-icons/bs'
 import useAuth from '../../Hook/useAuth'
+import DashboardNav from './DashbordNav/DashboardNav'
 const Sidebar = () => {
     const navigate = useNavigate()
     const [toggle, setToggle] = useState(false)
@@ -89,7 +90,7 @@ const Sidebar = () => {
                     <div className='flex flex-col justify-between flex-1 mt-6'>
                         <nav>
                             <>
-                                <label
+                                {/* <label
                                     htmlFor='Toggle3'
                                     className='inline-flex w-full justify-center items-center px-2 rounded-md cursor-pointer text-gray-800'
                                 >
@@ -105,9 +106,9 @@ const Sidebar = () => {
                                     <span className='px-4 py-1 rounded-r-md bg-gray-300 peer-checked:bg-primary text-white'>
                                         Host
                                     </span>
-                                </label>
+                                </label> */}
                                 {/* Menu Links */}
-                                <NavLink
+                                {/* <NavLink
                                     to='add-room'
                                     className={({ isActive }) =>
                                         `flex items-center px-4 py-2 mt-5  transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${isActive ? 'bg-gray-300  text-gray-700' : 'text-gray-600'
@@ -117,7 +118,8 @@ const Sidebar = () => {
                                     <BsFillHouseAddFill className='w-5 h-5' />
 
                                     <span className='mx-4 font-medium'>Add Room</span>
-                                </NavLink>
+                                </NavLink> */}
+                                <DashboardNav />
                             </>
                         </nav>
                     </div>
