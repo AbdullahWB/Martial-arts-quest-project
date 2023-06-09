@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ClassCart = ({ meet }) => {
-    const { instructorName, className, image, _id } = meet
+    const { instructorName, className, image, _id } = meet || {};
     return (
         <>
             <div className="card w-full rounded-none bg-base-100 shadow-xl">

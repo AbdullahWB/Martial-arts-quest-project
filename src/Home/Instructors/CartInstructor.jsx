@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CartInstructor = ({ instructor }) => {
-    const { image, name, _id } = instructor
+    const { image, name, _id } = instructor || {};
     return (
         <>
             <div className="card w-full rounded-none bg-base-100 shadow-xl">
