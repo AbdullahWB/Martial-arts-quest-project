@@ -30,7 +30,7 @@ const SingleClass = ({ item }) => {
         } else {
             if (user) {
                 const addItem = {addClassId: _id, className, instructorName, image, description, price, studentEmail: user.email}
-                fetch('http://localhost:5000/classes', {
+                fetch('http://localhost:5000/addClasses', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',
