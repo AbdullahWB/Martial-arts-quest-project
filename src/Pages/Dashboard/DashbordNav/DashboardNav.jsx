@@ -5,7 +5,7 @@ import StudentNav from './StudentNav';
 import Sidebar from '../Sidebar';
 
 const DashboardNav = () => {
-    const [userRole, setUserRole] = useState('admin')
+    const [userRole, setUserRole] = useState('student')
     const renderNavigation = () => {
         if (userRole === 'admin') {
             return <AdminNav />;

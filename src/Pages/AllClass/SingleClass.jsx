@@ -5,10 +5,10 @@ import Swal from 'sweetalert2';
 
 const SingleClass = ({ item }) => {
     const {user} = useAuth()
-    const { instructorId, description, price, availableSeats, image, instructorName, className } = item || {};
+    const { instructorId, description, price, availableSeats, image, instructorName, className, _id } = item || {};
     const navigate = useNavigate()
 
-    const handleUser = () => {
+    const handleAddToCart = (item) => {
         if (!user) {
             Swal.fire(
                 'Login First',
@@ -17,6 +17,8 @@ const SingleClass = ({ item }) => {
             )
             navigate('/login');
             return;
+        } else {
+            console.log(item);
         }
     };
 
@@ -29,7 +31,7 @@ const SingleClass = ({ item }) => {
                     <p className='tracking-widest'>{instructorName}</p>
                     <p className='hover:text-primary'>Available Seats: {availableSeats}</p>
                     <p className='text-xl font-medium'>Course Price: {price}$</p>
-                    <Link onClick={handleUser} className="btn btn-primary mt-2 rounded-full border-2 hover:bg-transparent text-white hover:text-primary">Enroll Now</Link>
+                    <button onClick={()=>handleAddToCart(item)} className="btn btn-primary mt-2 rounded-full border-2 hover:bg-transparent text-white hover:text-primary">Add Classes</button>
                     <button className="btn btn-outline btn-primary rounded-full border-2">Instructor</button>
                 </div>
             </div>
