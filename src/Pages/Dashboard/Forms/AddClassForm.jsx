@@ -36,10 +36,17 @@ const AddClassForm = () => {
 
             const responseData = await response.json();
             console.log(responseData);
+
+            if (responseData.acknowledged) {
+                alert('Data has been successfully posted!');
+            } else {
+                alert('Failed to post data. Please try again.');
+            }
         } catch (error) {
             console.log(error.message);
         }
     }
+
 
     return (
         <div>

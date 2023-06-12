@@ -5,6 +5,7 @@ import Container from '../../../Shared/Container';
 import Title from '../../../Components/Title';
 import { FaChalkboardTeacher, FaUserGraduate } from 'react-icons/fa';
 import { MdAdminPanelSettings } from 'react-icons/md';
+import { toast } from 'react-hot-toast';
 
 const AllUsers = () => {
     const { users, isLoading, refetch } = useUser();
@@ -12,6 +13,22 @@ const AllUsers = () => {
     if (isLoading) {
         return <Loading />
     }
+
+    const handleMakeChangeRole = (id, role) => {
+        fetch(`http://localhost:5000/users/role/${id}?role=${role}`, {
+            method: 'PATCH',
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                toast.success('change role successfully')
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    };
+
+
 
     return (
         <>
@@ -31,7 +48,9 @@ const AllUsers = () => {
                                 </th>
                                 <th>Photo</th>
                                 <th>Name & Email</th>
-                                <th>Student,Instructor,Admin</th>
+                                <th>Student</th>
+                                <th>Instructor</th>
+                                <th>Admin</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -56,10 +75,32 @@ const AllUsers = () => {
                                         <br />
                                         <span className="badge badge-primary badge-sm">{user?.name}</span>
                                     </td>
-                                    <td className='flex gap-5'>
-                                        <button className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-green-500'><FaUserGraduate /></button>
-                                        <button className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-blue-500'><FaChalkboardTeacher /></button>
-                                        <button className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-yellow-500'><MdAdminPanelSettings /></button>
+                                    <td>
+                                        <button
+                                            className="w-8 h-8 rounded-full text-white flex justify-center items-center bg-green-500"
+                                            onClick={() => handleMakeChangeRole(user._id, 'student')}
+                                            disabled={user.role === 'student'}
+                                        >
+                                            <FaUserGraduate />
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button
+                                            className="w-8 h-8 rounded-full text-white flex justify-center items-center bg-blue-500"
+                                            onClick={() => handleMakeChangeRole(user._id, 'instructor')}
+                                            disabled={user.role === 'instructor'}
+                                        >
+                                            <FaChalkboardTeacher />
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button
+                                            className="w-8 h-8 rounded-full text-white flex justify-center items-center bg-yellow-500"
+                                            onClick={() => handleMakeChangeRole(user._id, 'admin')}
+                                            disabled={user.role == 'admin'}
+                                        >
+                                            <MdAdminPanelSettings />
+                                        </button>
                                     </td>
                                 </tr>
                                 )
