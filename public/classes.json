@@ -2,74 +2,90 @@
     {
         "className": "Karate",
         "instructorName": "John Smith",
+        "instructorEmail": "johnsmith@example.com",
         "image": "https://templatekit.jegtheme.com/dotokai/wp-content/uploads/sites/265/2022/04/the-studio-shot-of-group-of-kids-training-karate-martial-arts-e1650361634799.jpg",
         "availableSeats": 15,
         "price": 50,
         "description": "Learn traditional Karate techniques and self-defense skills in a disciplined and supportive environment.",
-        "instructorId": 1
+        "instructorId": 1,
+        "status": "pending"
     },
     {
         "className": "Taekwondo",
         "instructorName": "John Smith",
+        "instructorEmail": "johnsmith@example.com",
         "image": "https://templatekit.jegtheme.com/dotokai/wp-content/uploads/sites/265/2022/04/karate-group-sitting-on-the-ground-and-meditates-e1650361644374.jpg",
         "availableSeats": 12,
         "price": 55,
         "description": "Master the dynamic kicks and strikes of Taekwondo while developing flexibility, speed, and agility.",
-        "instructorId": 1
+        "instructorId": 1,
+        "status": "pending"
     },
     {
         "className": "Muay Thai",
         "instructorName": "John Smith",
+        "instructorEmail": "johnsmith@example.com",
         "image": "https://templatekit.jegtheme.com/dotokai/wp-content/uploads/sites/265/2022/04/karate-player-breaking-a-tile-e1650361656970.jpg",
         "availableSeats": 10,
         "price": 60,
         "description": "Experience the art of eight limbs with Muay Thai training, focusing on striking techniques and conditioning.",
-        "instructorId": 1
+        "instructorId": 1,
+        "status": "pending"
     },
     {
         "className": "Brazilian Jiu-Jitsu",
         "instructorName": "Emily Johnson",
+        "instructorEmail": "emilyjohnson@example.com",
         "image": "https://templatekit.jegtheme.com/dotokai/wp-content/uploads/sites/265/2022/04/female-karate-fighters-and-master-in-white-kimono-e1650361717199.jpg",
         "availableSeats": 8,
         "price": 65,
         "description": "Learn ground fighting techniques, submissions, and positional control in the art of Brazilian Jiu-Jitsu.",
-        "instructorId": 2
+        "instructorId": 2,
+        "status": "pending"
     },
     {
         "className": "Kickboxing",
         "instructorName": "Emily Johnson",
+        "instructorEmail": "emilyjohnson@example.com",
         "image": "https://templatekit.jegtheme.com/dotokai/wp-content/uploads/sites/265/2022/04/martial-arts-master-on-fight-training-in-gym-e1650361729649.jpg",
         "availableSeats": 10,
         "price": 60,
         "description": "Train in a high-intensity cardio workout combining punches, kicks, and knee strikes in Kickboxing classes.",
-        "instructorId": 2
+        "instructorId": 2,
+        "status": "pending"
     },
     {
         "className": "Self-Defense",
         "instructorName": "Emily Johnson",
+        "instructorEmail": "emilyjohnson@example.com",
         "image": "https://templatekit.jegtheme.com/dotokai/wp-content/uploads/sites/265/2022/04/young-judo-fighter-in-kimono-posing-comfident-in-the-gym-strong-and-healthy-e1650361740442.jpg",
         "availableSeats": 15,
         "price": 50,
         "description": "Learn practical self-defense techniques and strategies to stay safe in various real-life situations.",
-        "instructorId": 2
+        "instructorId": 2,
+        "status": "pending"
     },
     {
         "className": "Krav Maga",
         "instructorName": "Emily Johnson",
+        "instructorEmail": "emilyjohnson@example.com",
         "image": "https://templatekit.jegtheme.com/dotokai/wp-content/uploads/sites/265/2022/04/karate-fighter-in-white-kimono-having-red-belt-e1650361820660.jpg",
         "availableSeats": 12,
         "price": 55,
         "description": "Master the highly effective self-defense system of Krav Maga, focusing on real-world scenarios.",
-        "instructorId": 2
+        "instructorId": 2,
+        "status": "pending"
     },
     {
         "className": "Kung Fu",
         "instructorName": "David Lee",
+        "instructorEmail": "davidlee@example.com",
         "image": "https://templatekit.jegtheme.com/dotokai/wp-content/uploads/sites/265/2022/04/karate-group-on-training-in-summer-field-e1650361840502.jpg",
         "availableSeats": 10,
         "price": 60,
         "description": "Immerse yourself in the ancient Chinese martial art of Kung Fu, cultivating strength, flexibility, and mindfulness.",
-        "instructorId": 3
+        "instructorId": 3,
+        "status": "pending"
     },
     {
         "className": "Tai Chi",
@@ -78,7 +94,9 @@
         "availableSeats": 12,
         "price": 55,
         "description": "Experience the graceful movements and meditative aspects of Tai Chi, promoting balance and harmony.",
-        "instructorId": 3
+        "instructorId": 3,
+        "status": "pending",
+        "instructorEmail": "davidlee@example.com"
     },
     {
         "className": "Boxing",
@@ -87,7 +105,9 @@
         "availableSeats": 8,
         "price": 65,
         "description": "Train in the noble art of Boxing, honing your punching technique, footwork, and defensive skills.",
-        "instructorId": 4
+        "instructorId": 4,
+        "status": "pending",
+        "instructorEmail": "sarahthompson@example.com"
     },
     {
         "className": "Fitness Kickboxing",
@@ -96,7 +116,9 @@
         "availableSeats": 10,
         "price": 60,
         "description": "Get in shape and burn calories with Fitness Kickboxing classes, combining martial arts techniques and cardio exercises.",
-        "instructorId": 4
+        "instructorId": 4,
+        "status": "pending",
+        "instructorEmail": "sarahthompson@example.com"
     },
     {
         "className": "Cardio Combat",
@@ -105,7 +127,9 @@
         "availableSeats": 15,
         "price": 50,
         "description": "Engage in a high-energy, full-body workout with Cardio Combat, incorporating martial arts-inspired movements.",
-        "instructorId": 4
+        "instructorId": 4,
+        "status": "pending",
+        "instructorEmail": "sarahthompson@example.com"
     },
     {
         "className": "MMA",
@@ -114,7 +138,9 @@
         "availableSeats": 12,
         "price": 55,
         "description": "Train in the diverse disciplines of Mixed Martial Arts (MMA), combining striking, grappling, and submissions.",
-        "instructorId": 5
+        "instructorId": 5,
+        "status": "pending",
+        "instructorEmail": "michaeldavis@example.com"
     },
     {
         "className": "Wrestling",
@@ -123,7 +149,9 @@
         "availableSeats": 10,
         "price": 60,
         "description": "Master the techniques of wrestling, focusing on takedowns, throws, and ground control.",
-        "instructorId": 5
+        "instructorId": 5,
+        "status": "pending",
+        "instructorEmail": "michaeldavis@example.com"
     },
     {
         "className": "Conditioning",
@@ -132,7 +160,9 @@
         "availableSeats": 15,
         "price": 50,
         "description": "Improve your overall fitness and strength with Conditioning classes, incorporating martial arts-inspired exercises.",
-        "instructorId": 5
+        "instructorId": 5,
+        "status": "pending",
+        "instructorEmail": "michaeldavis@example.com"
     },
     {
         "className": "Capoeira",
@@ -141,7 +171,9 @@
         "availableSeats": 8,
         "price": 65,
         "description": "Experience the vibrant Afro-Brazilian art of Capoeira, combining martial arts, dance, and music in a dynamic practice.",
-        "instructorId": 6
+        "instructorId": 6,
+        "status": "pending",
+        "instructorEmail": "jessicamartinez@example.com"
     },
     {
         "className": "Samba-Fit",
@@ -150,7 +182,9 @@
         "availableSeats": 10,
         "price": 60,
         "description": "Enjoy a fun and energetic workout with Samba-Fit, a fusion of Samba dance and fitness exercises.",
-        "instructorId": 6
+        "instructorId": 6,
+        "status": "pending",
+        "instructorEmail": "jessicamartinez@example.com"
     },
     {
         "className": "Acrobatics",
@@ -159,6 +193,8 @@
         "availableSeats": 12,
         "price": 55,
         "description": "Learn impressive acrobatic movements and develop strength, flexibility, and coordination through Acrobatics classes.",
-        "instructorId": 6
+        "instructorId": 6,
+        "status": "pending",
+        "instructorEmail": "jessicamartinez@example.com"
     }
 ]

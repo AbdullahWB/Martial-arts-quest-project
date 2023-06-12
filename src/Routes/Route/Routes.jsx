@@ -11,6 +11,7 @@ import AddClass from "../../Pages/Dashboard/AddClass";
 import AllUsers from "../../Pages/Dashboard/ForAdmin/AllUsers";
 import MyClass from "../../Pages/Dashboard/ForStudent/MyClass";
 import AddClassForm from "../../Pages/Dashboard/Forms/AddClassForm";
+import UpdateClass from "../../Pages/Dashboard/Forms/updateClass";
 
 const router = createBrowserRouter([
     {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
             {
                 path: 'addClass',
                 element: <AddClassForm />,
+            },
+            {
+                path: 'updateClass',
+                element: <UpdateClass />
             }
         ]
     }
