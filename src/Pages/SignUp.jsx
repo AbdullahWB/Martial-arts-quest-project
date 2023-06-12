@@ -150,7 +150,7 @@ const SignUp = () => {
                                 />
                                 {errors.photo && <span className='text-xs ml-3 text-red-500'>Photo is required</span>}
                             </div>
-                            <div className="form-control w-full">
+                            {/* <div className="form-control w-full">
                                 <label className="label">
                                     <span className="label-text">Your Gender</span>
                                 </label>
@@ -174,7 +174,7 @@ const SignUp = () => {
                                 </label>
                                 <input type="text" {...register("address", { required: true })} placeholder="Address Here" className="input input-bordered w-full rounded-full border-primary" />
                                 {errors.address && <span className='text-xs ml-3 text-red-500'>Address is required</span>}
-                            </div>
+                            </div> */}
 
                             <div className='grid grid-cols-2 gap-10'>
                                 <div className="form-control">

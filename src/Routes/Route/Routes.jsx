@@ -10,6 +10,7 @@ import DashboardLayout from "../../Layouts/DashboardLayout";
 import AddClass from "../../Pages/Dashboard/AddClass";
 import AllUsers from "../../Pages/Dashboard/ForAdmin/AllUsers";
 import MyClass from "../../Pages/Dashboard/ForStudent/MyClass";
+import AddClassForm from "../../Pages/Dashboard/Forms/AddClassForm";
 
 const router = createBrowserRouter([
     {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
             {
                 path: 'myClass',
                 element: <MyClass />
+            },
+            {
+                path: 'addClass',
+                element: <AddClassForm />,
             }
         ]
     }
