@@ -12,6 +12,7 @@ import AllUsers from "../../Pages/Dashboard/ForAdmin/AllUsers";
 import MyClass from "../../Pages/Dashboard/ForStudent/MyClass";
 import AddClassForm from "../../Pages/Dashboard/Forms/AddClassForm";
 import UpdateClass from "../../Pages/Dashboard/Forms/updateClass";
+import PrivetRoute from "../PrivetRoute/PrivetRoute";
 
 const router = createBrowserRouter([
     {
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <DashboardLayout />,
+        element: <PrivetRoute><DashboardLayout /></PrivetRoute>,
         children: [
             {
                 path: 'addClass',

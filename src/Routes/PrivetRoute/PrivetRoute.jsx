@@ -3,7 +3,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import Loading from '../../Loading/Loading';
 import useAuth from '../../Hook/useAuth';
 
-const PrivetRoute = () => {
+const PrivetRoute = ({children}) => {
     const { user, loading } = useAuth()
     const location = useLocation()
 
