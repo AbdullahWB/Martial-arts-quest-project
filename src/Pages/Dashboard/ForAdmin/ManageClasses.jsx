@@ -41,6 +41,10 @@ const ManageClasses = () => {
             });
     };
 
+    const handleFeedback = () => {
+        // todo
+    }
+
 
     return (
         <div>
@@ -118,8 +122,7 @@ const ManageClasses = () => {
                                     <td>
                                         <button
                                             className="w-8 h-8 rounded-full text-white flex justify-center items-center bg-yellow-500"
-                                            // onClick={() => handleMakeChangeRole(ac._id, 'admin')}
-                                            // disabled={ac.role == 'admin'}
+                                            onClick={()=>handleFeedback(ac?._id)}
                                         >
                                             <RiFeedbackFill />
                                         </button>
