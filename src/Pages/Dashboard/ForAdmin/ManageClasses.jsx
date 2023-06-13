@@ -30,6 +30,7 @@ const ManageClasses = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                refetch()
                 if (data.modifiedCount > 0) {
                     toast.success('Updated status: ' + data.status)
                 }
@@ -104,12 +105,12 @@ const ManageClasses = () => {
                                     </td>
                                     <td>
                                         <button
-                                            className={`w-8 h-8 rounded-full text-white flex justify-center items-center ${ac.status === 'approve' || ac.status === 'deny'
+                                            className={`w-8 h-8 rounded-full text-white flex justify-center items-center ${ac.status === 'deny'
                                                 ? 'bg-gray-500'
                                                 : 'bg-red-500'
                                                 }`}
                                             onClick={() => handleConfirm(ac._id, 'deny')}
-                                            disabled={ac.status === 'deny' || ac.status === 'approve'}
+                                            disabled={ac.status === 'deny'}
                                         >
                                             <RxCross2 />
                                         </button>

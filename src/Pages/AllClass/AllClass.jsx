@@ -15,6 +15,7 @@ const AllClass = () => {
             })
     }, [])
 
+
     return (
         <div className='mt-[50px] mb-[150px]'>
             <Container>
@@ -25,10 +26,14 @@ const AllClass = () => {
                 />
                 <div className='max-w-7xl mx-auto grid md:grid-cols-3 grid-cols-1 gap-8 mt-10 mb-[150px]'>
                     {
-                        classItems.map(item => <SingleClass
-                            key={item._id}
-                            item={item}
-                        ></SingleClass>)
+                        classItems
+                            .filter(item => item.status !== 'pending' && item.status !== 'deny')
+                            .map(item => (
+                                <SingleClass
+                                    key={item._id}
+                                    item={item}
+                                />
+                            ))
                     }
                 </div>
             </Container>
