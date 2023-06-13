@@ -1,22 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
-import useAuth from "./useAuth";
 import UseAxiosSecure from "./UseAxiosSecure";
+import useAuth from "./useAuth";
 
-const useUser = () => {
+const useAllClasses = () => {
     const { loading } = useAuth();
     const [axiosSecure] = UseAxiosSecure()
 
-    const { isLoading, data: users = {}, refetch } = useQuery({
-        queryKey: ["users"],
+    const { isLoading, data: allClass = {}, refetch } = useQuery({
+        queryKey: ["allClass"],
         enabled: !loading,
         queryFn: async () => {
-            const res = await axiosSecure("/users");
+            const res = await axiosSecure("/classes");
             console.log("response", res);
             return res.data
         },
     });
 
-    return { users, isLoading, refetch };
-};
+    return [ isLoading, allClass, refetch ];
+}
 
-export default useUser;
+export default useAllClasses;

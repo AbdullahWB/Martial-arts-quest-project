@@ -13,6 +13,7 @@ import MyClass from "../../Pages/Dashboard/ForStudent/MyClass";
 import AddClassForm from "../../Pages/Dashboard/Forms/AddClassForm";
 import UpdateClass from "../../Pages/Dashboard/Forms/updateClass";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
+import ManageClasses from "../../Pages/Dashboard/ForAdmin/ManageClasses";
 
 const router = createBrowserRouter([
     {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
             {
                 path: 'updateClass',
                 element: <UpdateClass />
+            },
+            {
+                path: 'manageClasses',
+                element: <ManageClasses />
             }
         ]
     }
