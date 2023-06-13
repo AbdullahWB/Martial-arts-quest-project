@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import useAuth from '../../Hook/useAuth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useUser from '../../Hook/useUser';
+import useUserType from '../../Hook/useUserType';
+
 
 const SingleClass = ({ item }) => {
     const { user } = useAuth()
     const { instructorId, description, price, availableSeats, image, instructorName, className, _id } = item || {};
     const navigate = useNavigate()
     const location = useLocation()
-    const [addClass, SetAddClass] = useState(false)
+    const userType = useUserType();
 
     const handleAddToCart = (item) => {
         if (!user) {
@@ -22,14 +25,14 @@ const SingleClass = ({ item }) => {
                 confirmButtonText: 'Login Now',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    navigate('/login', {state: {from: location}})
+                    navigate('/login', { state: { from: location } })
                 }
             })
             navigate('/login');
             return;
         } else {
             if (user) {
-                const addItem = {addClassId: _id, className, instructorName, image, description, price, studentEmail: user.email}
+                const addItem = { addClassId: _id, className, instructorName, image, description, price, studentEmail: user.email }
                 fetch('http://localhost:5000/addClasses', {
                     method: 'POST',
                     headers: {
@@ -62,7 +65,7 @@ const SingleClass = ({ item }) => {
                     <p className='tracking-widest'>{instructorName}</p>
                     <p className='hover:text-primary'>Available Seats: {availableSeats}</p>
                     <p className='text-xl font-medium'>Course Price: {price}$</p>
-                    <button disabled={addClass} onClick={() => handleAddToCart(item)} className="btn btn-primary mt-2 rounded-full border-2 hover:bg-transparent text-white hover:text-primary">Add Classes</button>
+                    <button disabled={userType?.admin || userType?.instructor} onClick={() => handleAddToCart(item)} className="btn btn-primary mt-2 rounded-full border-2 hover:bg-transparent text-white hover:text-primary">Add Classes</button>
                     <button className="btn btn-outline btn-primary rounded-full border-2">Instructor</button>
                 </div>
             </div>
