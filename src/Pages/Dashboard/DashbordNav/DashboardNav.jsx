@@ -3,25 +3,24 @@ import AdminNav from './AdminNav';
 import InstructorNav from './InstructorNav';
 import StudentNav from './StudentNav';
 import Sidebar from '../Sidebar';
+import useUserType from '../../../Hook/useUserType';
 
 const DashboardNav = () => {
-    const [userRole, setUserRole] = useState('student')
+    const userType = useUserType();
+
     const renderNavigation = () => {
-        if (userRole === 'admin') {
+        if (userType.admin) {
             return <AdminNav />;
-        } else if (userRole === 'instructor') {
+        } else if (userType.instructor) {
             return <InstructorNav />;
-        } else if (userRole === 'student') {
+        } else if (userType.student) {
             return <StudentNav />;
         }
-        // Handle other cases or show a default navigation if needed
         return null;
     };
+
     return (
         <>
-            {/* {
-                <Sidebar renderNavigation={renderNavigation} />
-            } */}
             {
                 renderNavigation()
             }
