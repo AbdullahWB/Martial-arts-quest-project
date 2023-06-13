@@ -77,7 +77,7 @@ const AllUsers = () => {
                                     </td>
                                     <td>
                                         <button
-                                            className="w-8 h-8 rounded-full text-white flex justify-center items-center bg-green-500"
+                                            className={`w-8 h-8 rounded-full text-white flex justify-center items-center ${user.role === 'student' ? 'bg-gray-500' : 'bg-green-500'}`}
                                             onClick={() => handleMakeChangeRole(user._id, 'student')}
                                             disabled={user.role === 'student'}
                                         >
@@ -86,7 +86,7 @@ const AllUsers = () => {
                                     </td>
                                     <td>
                                         <button
-                                            className="w-8 h-8 rounded-full text-white flex justify-center items-center bg-blue-500"
+                                            className={`w-8 h-8 rounded-full text-white flex justify-center items-center ${user.role === 'instructor' ? 'bg-gray-500' : 'bg-blue-500'}`}
                                             onClick={() => handleMakeChangeRole(user._id, 'instructor')}
                                             disabled={user.role === 'instructor'}
                                         >
@@ -95,13 +95,14 @@ const AllUsers = () => {
                                     </td>
                                     <td>
                                         <button
-                                            className="w-8 h-8 rounded-full text-white flex justify-center items-center bg-yellow-500"
+                                            className={`w-8 h-8 rounded-full text-white flex justify-center items-center ${user.role === 'admin' ? 'bg-gray-500' : 'bg-yellow-500'}`}
                                             onClick={() => handleMakeChangeRole(user._id, 'admin')}
-                                            disabled={user.role == 'admin'}
+                                            disabled={user.role === 'admin'}
                                         >
                                             <MdAdminPanelSettings />
                                         </button>
                                     </td>
+
                                 </tr>
                                 )
                             }

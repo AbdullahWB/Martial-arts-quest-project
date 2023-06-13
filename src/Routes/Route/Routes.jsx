@@ -14,6 +14,9 @@ import AddClassForm from "../../Pages/Dashboard/Forms/AddClassForm";
 import UpdateClass from "../../Pages/Dashboard/Forms/updateClass";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import ManageClasses from "../../Pages/Dashboard/ForAdmin/ManageClasses";
+import AdminHome from "../../Pages/Dashboard/ForAdmin/AdminHome";
+import StudentHome from "../../Pages/Dashboard/ForStudent/StudentHome";
+import InstructorHome from "../../Pages/Dashboard/Instructor/InstructorHome";
 
 const router = createBrowserRouter([
     {
@@ -70,6 +73,18 @@ const router = createBrowserRouter([
             {
                 path: 'manageClasses',
                 element: <ManageClasses />
+            },
+            {
+                path: 'adminHome',
+                element: <AdminHome />
+            },
+            {
+                path: 'studentHome',
+                element: <StudentHome />
+            },
+            {
+                path: 'instructorHome',
+                element: <InstructorHome />
             }
         ]
     }
