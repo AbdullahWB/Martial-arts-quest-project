@@ -3,6 +3,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import React, { useEffect, useState } from 'react';
 import CheckoutForm from './CheckoutForm';
 import { useParams } from 'react-router-dom';
+import Title from '../../../Components/Title';
 
 
 const stripePromise = loadStripe(import.meta.env.VITE_Payment_GetWay_PK)
@@ -30,10 +31,16 @@ const Payment = () => {
 
     return (
         <div>
-            payment
-            <Elements stripe={stripePromise}>
-                <CheckoutForm cart={cart}></CheckoutForm>
-            </Elements>
+            <Title
+                extraTitle={"Manage your payment"}
+                title={"Here you make your payment"}
+                subtitle={"Join us at Martial Arts Academy and embark on a transformative journey of self-discovery, empowerment, and martial arts excellence. Unleash your potential, cultivate your mind-body connection, and become the best version of yourself."}
+            />
+            <div className='w-[50%] mx-auto mt-10'>
+                <Elements stripe={stripePromise}>
+                    <CheckoutForm cart={cart}></CheckoutForm>
+                </Elements>
+            </div>
         </div>
     );
 };

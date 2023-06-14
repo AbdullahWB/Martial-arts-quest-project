@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import UseAxiosSecure from '../../../Hook/UseAxiosSecure';
 import useAuth from '../../../Hook/useAuth';
-import './CheckoutForm.css'
+// import './CheckoutForm.css'
 
 const CheckoutForm = ({ cart }) => {
     console.log(cart);
@@ -20,7 +20,7 @@ const CheckoutForm = ({ cart }) => {
     useEffect(() => {
         if (cart?.price > 0) {
             console.log(cart.price);
-            axiosSecure.post('/create-payment-intent', {price: cart?.price})
+            axiosSecure.post('/create-payment-intent', { price: cart?.price })
                 .then(res => {
                     console.log(res.data.clientSecret);
                     setClientSecret(res.data.clientSecret)
@@ -100,7 +100,7 @@ const CheckoutForm = ({ cart }) => {
     // console.log(stripe);
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="flex flex-col items-center">
             <CardElement
                 options={{
                     style: {
@@ -116,11 +116,17 @@ const CheckoutForm = ({ cart }) => {
                         },
                     },
                 }}
+                className="w-full p-2 border border-gray-300 rounded-md"
             />
-            <button className='btn rounded-full btn-outline btn-primary btn-sm' type="submit" disabled={!stripe || !clientSecret || processing}>
+            <button
+                className="btn rounded-full btn-outline btn-primary px-10 btn-sm mt-4"
+                type="submit"
+                disabled={!stripe || !clientSecret || processing}
+            >
                 Pay
             </button>
         </form>
+
     );
 };
 

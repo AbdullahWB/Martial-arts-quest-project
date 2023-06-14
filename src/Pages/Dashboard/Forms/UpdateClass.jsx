@@ -14,6 +14,10 @@ const UpdateClass = () => {
         return <Loading />
     }
 
+    const handleDelete = id => {
+        // for deleting
+    }
+
     return (
         <div>
             <Container>
@@ -67,7 +71,7 @@ const UpdateClass = () => {
                                         <button className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-green-500'><RxOpenInNewWindow /></button>
                                     </td>
                                     <td>
-                                        <button className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-red-500'><FaTrash /></button>
+                                        <button onClick={()=> handleDelete(ac?._id)} className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-red-500'><FaTrash /></button>
                                     </td>
                                     <td>
                                         {

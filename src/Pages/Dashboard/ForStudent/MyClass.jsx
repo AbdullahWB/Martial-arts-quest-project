@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useClasses from '../../../Hook/useClasses';
 import Loading from '../../../Loading/Loading';
 import Container from '../../../Shared/Container';
@@ -6,12 +6,30 @@ import Title from '../../../Components/Title';
 import { FaTrash } from 'react-icons/fa';
 import { RxOpenInNewWindow } from 'react-icons/Rx';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const MyClass = () => {
     const [isLoading, AddClasses, refetch] = useClasses()
 
     if (isLoading) {
         return <Loading />
+    }
+
+    const handleDeleteData = id => {
+        fetch(`http://localhost:5000/myClasses/${id}`, {
+            method: 'DELETE',
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    refetch()
+                    Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                    )
+                }
+            })
     }
 
     console.log(AddClasses);
@@ -63,10 +81,10 @@ const MyClass = () => {
                                     </td>
                                     <td>{ac?.price}$</td>
                                     <td className=''>
-                                        <Link to={`/dashboard/payment/${ac?.addClassId}`}  className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-green-500'><RxOpenInNewWindow /></Link>
+                                        <Link to={`/dashboard/payment/${ac?._id}`} className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-green-500'><RxOpenInNewWindow /></Link>
                                     </td>
                                     <td className=''>
-                                        <button className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-red-500'><FaTrash /></button>
+                                        <button onClick={()=>handleDeleteData(ac?._id)} className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-red-500'><FaTrash /></button>
                                     </td>
                                 </tr>
                                 )
