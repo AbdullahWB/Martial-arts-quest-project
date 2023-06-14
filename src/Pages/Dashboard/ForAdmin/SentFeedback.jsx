@@ -15,12 +15,15 @@ const SentFeedback = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ feedback }), // Shorthand property syntax
+            body: JSON.stringify({ feedback }),
         })
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                toast.success('Feedback submitted successfully');
+                reset()
+                if (modifiedCount > 0) {
+                    toast.success('Feedback submitted successfully');
+                }
             })
             .catch((err) => {
                 console.log(err);

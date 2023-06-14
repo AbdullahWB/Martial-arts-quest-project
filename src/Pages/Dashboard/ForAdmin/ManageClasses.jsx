@@ -37,32 +37,9 @@ const ManageClasses = () => {
                 }
             })
             .catch(error => {
-                // Handle error
                 console.log(error);
             });
     };
-
-    // const handleSubmitFeedback = (event) => {
-    //     event.preventDefault();
-    //     const feedback = document.getElementById('feedback').value;
-    //     console.log(feedback);
-    //     fetch(`http://localhost:5000/classes/${_id}`, {
-    //         method: 'PUT',
-    //         headers: {
-    //             "content-type": "application/json"
-    //         },
-    //         body: JSON.stringify(data)
-    //     })
-    //         .then(res => res.json())
-    //         .then(result => {
-    //             if (result.modifiedCount > 0) {
-    //                 toast.success('successfully Updated Data ✅')
-    //                 setUpdate(!update)
-    //             }
-    //         })
-    // };
-
-
 
     return (
         <div>

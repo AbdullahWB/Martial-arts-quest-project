@@ -8,7 +8,7 @@ import { MdAdminPanelSettings } from 'react-icons/md';
 import { toast } from 'react-hot-toast';
 
 const AllUsers = () => {
-    const { users, isLoading, refetch } = useUser();
+    const [isLoading, users, refetch] = useUser();
 
     if (isLoading) {
         return <Loading />
@@ -20,6 +20,7 @@ const AllUsers = () => {
         })
             .then(res => res.json())
             .then(data => {
+                refetch()
                 console.log(data);
                 toast.success('change role successfully')
             })
