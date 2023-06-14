@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import UseAxiosSecure from '../../../Hook/UseAxiosSecure';
 import useAuth from '../../../Hook/useAuth';
+import './CheckoutForm.css'
 
 const CheckoutForm = ({ cart }) => {
     console.log(cart);
@@ -74,29 +75,29 @@ const CheckoutForm = ({ cart }) => {
             // setTransactionId(paymentIntent.id);
             const transactionId = paymentIntent.id;
             toast.success(transactionId)
-            // const payment = {
-            //     email: user?.email,
-            //     transactionId: paymentIntent.id,
-            //     price,
-            //     date: new Date(),
-            //     quantity: cart.length,
-            //     cartItems: cart.map(item => item._id),
-            //     menuItems: cart.map(item => item.menuItemId),
-            //     status: 'service pending',
-            //     items: cart.map(item => item.name)
-            // }
-            // axiosSecure.post('/payments', payment)
-            //     .then(res => {
-            //         console.log(res.data);
-            //         if (res.data.insertedId) {
-            //             // display confirm
-            //         }
-            //     })
+            const payment = {
+                email: user?.email,
+                transactionId: paymentIntent.id,
+                price: cart.price,
+                date: new Date(),
+                quantity: 1,
+                cartItems: cart._id,
+                status: 'Enrolled',
+                item: cart.className,
+                image: cart.image,
+            }
+            axiosSecure.post('/payments', payment)
+                .then(res => {
+                    console.log(res.data);
+                    if (res.data.insertedId) {
+                        toast.success('data add successfully')
+                    }
+                })
         }
     }
 
-    console.log(clientSecret);
-    console.log(stripe);
+    // console.log(clientSecret);
+    // console.log(stripe);
 
     return (
         <form onSubmit={handleSubmit}>
