@@ -5,9 +5,9 @@
 
 ## Some Important Link and id
 
-- live site link => [Martial Arts Quest]()
+- live site link => [Martial Arts Quest](https://summereducational-camp-project.web.app/)
 
-- live server link => [Martial Arts Quest live server]()
+- live server link => [Martial Arts Quest live server](https://summer-camp-server-ochre.vercel.app/)
 
 - GitHub client site link => [Martial Arts Quest github project](https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-AbdullahWB)
 
