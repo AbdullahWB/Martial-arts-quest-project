@@ -19,6 +19,7 @@ import StudentHome from "../../Pages/Dashboard/ForStudent/StudentHome";
 import InstructorHome from "../../Pages/Dashboard/Instructor/InstructorHome";
 import SentFeedback from "../../Pages/Dashboard/ForAdmin/SentFeedback";
 import Payment from "../../Pages/Dashboard/ForStudent/Payment";
+import EnrolledClasses from "../../Pages/Dashboard/ForStudent/EnrolledClasses";
 
 const router = createBrowserRouter([
     {
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
             {
                 path: 'payment/:id',
                 element: <Payment />
+            },
+            {
+                path: 'enrolledClasses',
+                element: <EnrolledClasses />
             }
         ]
     },
