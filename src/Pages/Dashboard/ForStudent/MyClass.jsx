@@ -63,7 +63,7 @@ const MyClass = () => {
                                     </td>
                                     <td>{ac?.price}$</td>
                                     <td className=''>
-                                        <Link to='/dashboard/payment'  className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-green-500'><RxOpenInNewWindow /></Link>
+                                        <Link to={`/dashboard/payment/${ac?.addClassId}`}  className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-green-500'><RxOpenInNewWindow /></Link>
                                     </td>
                                     <td className=''>
                                         <button className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-red-500'><FaTrash /></button>

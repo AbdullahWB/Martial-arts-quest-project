@@ -93,7 +93,7 @@ const router = createBrowserRouter([
                 element: <SentFeedback />
             },
             {
-                path: 'payment',
+                path: 'payment/:id',
                 element: <Payment />
             }
         ]

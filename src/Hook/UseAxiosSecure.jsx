@@ -6,17 +6,17 @@ import useAuth from './useAuth';
 
 
 
-// const axiosSecure = axios.create({
-//   baseURL: 'http://localhost:3000', 
-// });
+const axiosSecure = axios.create({
+  baseURL: 'http://localhost:5000', 
+});
 
 const UseAxiosSecure = () => {
   const { logOut } = useAuth();
   const navigate = useNavigate();
 
-  const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000',
-  });
+  // const axiosSecure = axios.create({
+  //   baseURL: 'http://localhost:5000',
+  // });
 
   useEffect(() => {
     axiosSecure.interceptors.request.use((config) => {
