@@ -7,6 +7,7 @@ import { RiFeedbackFill } from 'react-icons/Ri';
 import { BsCheckAll } from 'react-icons/bs';
 import { RxCross2 } from 'react-icons/Rx';
 import { toast } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 const ManageClasses = () => {
     const [isLoading, allClass, refetch] = useAllClasses()
@@ -41,9 +42,26 @@ const ManageClasses = () => {
             });
     };
 
-    const handleFeedback = () => {
-        // todo
-    }
+    // const handleSubmitFeedback = (event) => {
+    //     event.preventDefault();
+    //     const feedback = document.getElementById('feedback').value;
+    //     console.log(feedback);
+    //     fetch(`http://localhost:5000/classes/${_id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             "content-type": "application/json"
+    //         },
+    //         body: JSON.stringify(data)
+    //     })
+    //         .then(res => res.json())
+    //         .then(result => {
+    //             if (result.modifiedCount > 0) {
+    //                 toast.success('successfully Updated Data ✅')
+    //                 setUpdate(!update)
+    //             }
+    //         })
+    // };
+
 
 
     return (
@@ -120,12 +138,11 @@ const ManageClasses = () => {
                                         </button>
                                     </td>
                                     <td>
-                                        <button
+                                        <Link to={`/dashboard/sentFeedback/${ac._id}`}
                                             className="w-8 h-8 rounded-full text-white flex justify-center items-center bg-yellow-500"
-                                            onClick={()=>handleFeedback(ac?._id)}
                                         >
                                             <RiFeedbackFill />
-                                        </button>
+                                        </Link>
                                     </td>
                                 </tr>
                                 )

@@ -5,6 +5,7 @@ import Container from '../../../Shared/Container';
 import Title from '../../../Components/Title';
 import { FaTrash } from 'react-icons/fa';
 import { RxOpenInNewWindow } from 'react-icons/Rx';
+import { Link } from 'react-router-dom';
 
 const MyClass = () => {
     const [isLoading, AddClasses, refetch] = useClasses()
@@ -34,7 +35,8 @@ const MyClass = () => {
                                 <th>Photo</th>
                                 <th>Name & Instructor Name</th>
                                 <th>Price</th>
-                                <th>Enroll,Delete</th>
+                                <th>Enroll</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -60,8 +62,10 @@ const MyClass = () => {
                                         <span className="badge badge-primary badge-sm">{ac?.instructorName}</span>
                                     </td>
                                     <td>{ac?.price}$</td>
-                                    <td className='flex gap-5'>
-                                        <button className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-green-500'><RxOpenInNewWindow /></button>
+                                    <td className=''>
+                                        <Link to='/dashboard/payment'  className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-green-500'><RxOpenInNewWindow /></Link>
+                                    </td>
+                                    <td className=''>
                                         <button className='w-8 h-8 rounded-full text-white flex justify-center items-center bg-red-500'><FaTrash /></button>
                                     </td>
                                 </tr>

@@ -17,6 +17,8 @@ import ManageClasses from "../../Pages/Dashboard/ForAdmin/ManageClasses";
 import AdminHome from "../../Pages/Dashboard/ForAdmin/AdminHome";
 import StudentHome from "../../Pages/Dashboard/ForStudent/StudentHome";
 import InstructorHome from "../../Pages/Dashboard/Instructor/InstructorHome";
+import SentFeedback from "../../Pages/Dashboard/ForAdmin/SentFeedback";
+import Payment from "../../Pages/Dashboard/ForStudent/Payment";
 
 const router = createBrowserRouter([
     {
@@ -85,9 +87,17 @@ const router = createBrowserRouter([
             {
                 path: 'instructorHome',
                 element: <InstructorHome />
+            },
+            {
+                path: 'sentFeedback/:id',
+                element: <SentFeedback />
+            },
+            {
+                path: 'payment',
+                element: <Payment />
             }
         ]
-    }
+    },
 ]);
 
 export default router;
