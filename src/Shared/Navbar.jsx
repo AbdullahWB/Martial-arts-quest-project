@@ -76,20 +76,22 @@ const Navbar = () => {
                 Classes
             </NavLink>
         </li>
-        <li className='text-2xl font-semibold '>
-            <NavLink
-                to='/dashboard'
-                className={({ isActive, isPending }) =>
-                    isActive
-                        ? "text-primary"
-                        : isPending
-                            ? "text-secondary"
-                            : ""
-                }
-            >
-                Dashboard
-            </NavLink>
-        </li>
+        {
+            user ? <li className='text-2xl font-semibold '>
+                <NavLink
+                    to='/dashboard'
+                    className={({ isActive, isPending }) =>
+                        isActive
+                            ? "text-primary"
+                            : isPending
+                                ? "text-secondary"
+                                : ""
+                    }
+                >
+                    Dashboard
+                </NavLink>
+            </li> : ""
+        }
     </>
     return (
         <Container>
