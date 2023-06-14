@@ -16,7 +16,7 @@ const MyClass = () => {
     }
 
     const handleDeleteData = id => {
-        fetch(`http://localhost:5000/myClasses/${id}`, {
+        fetch(`https://summer-camp-server-ochre.vercel.app/myClasses/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

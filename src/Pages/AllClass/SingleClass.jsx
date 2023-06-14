@@ -33,7 +33,7 @@ const SingleClass = ({ item }) => {
         } else {
             if (user) {
                 const addItem = { addClassId: _id, className, instructorName, image, description, price, studentEmail: user.email }
-                fetch('http://localhost:5000/addClasses', {
+                fetch('https://summer-camp-server-ochre.vercel.app/addClasses', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',
@@ -65,7 +65,7 @@ const SingleClass = ({ item }) => {
                     <p className='tracking-widest'>{instructorName}</p>
                     <p className='hover:text-primary'>Available Seats: {availableSeats}</p>
                     <p className='text-xl font-medium'>Course Price: {price}$</p>
-                    <button disabled={userType?.admin || userType?.instructor} onClick={() => handleAddToCart(item)} className="btn btn-primary mt-2 rounded-full border-2 hover:bg-transparent text-white hover:text-primary">Add Classes</button>
+                    <button disabled={userType?.admin || userType?.instructor || availableSeats<0} onClick={() => handleAddToCart(item)} className="btn btn-primary mt-2 rounded-full border-2 hover:bg-transparent text-white hover:text-primary">Add Classes</button>
                     <button className="btn btn-outline btn-primary rounded-full border-2">Instructor</button>
                 </div>
             </div>

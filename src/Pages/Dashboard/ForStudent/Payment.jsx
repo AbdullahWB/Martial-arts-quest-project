@@ -15,7 +15,7 @@ const Payment = () => {
     // console.log(price);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/payment/${id}`)
+        fetch(`https://summer-camp-server-ochre.vercel.app/payment/${id}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

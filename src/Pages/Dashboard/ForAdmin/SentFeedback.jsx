@@ -10,7 +10,7 @@ const SentFeedback = () => {
         event.preventDefault();
         const feedback = event.target.feedback.value;
 
-        fetch(`http://localhost:5000/classes/feedback/${id}`, {
+        fetch(`https://summer-camp-server-ochre.vercel.app/classes/feedback/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

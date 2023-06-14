@@ -26,7 +26,7 @@ const AddClassForm = () => {
                 status: data.status,
             };
 
-            const response = await fetch('http://localhost:5000/classes', {
+            const response = await fetch('https://summer-camp-server-ochre.vercel.app/classes', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

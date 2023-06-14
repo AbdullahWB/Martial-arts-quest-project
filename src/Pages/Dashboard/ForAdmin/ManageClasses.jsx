@@ -21,7 +21,7 @@ const ManageClasses = () => {
     const handleConfirm = (id, status) => {
         const updatedBooking = { status };
 
-        fetch(`http://localhost:5000/classes/${id}`, {
+        fetch(`https://summer-camp-server-ochre.vercel.app/classes/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

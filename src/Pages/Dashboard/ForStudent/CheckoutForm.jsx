@@ -90,7 +90,10 @@ const CheckoutForm = ({ cart }) => {
                 .then(res => {
                     console.log(res.data);
                     if (res.data.insertedId) {
+                        axiosSecure.patch(`/myClasses/enroll/${payment.cartItems}`)
+                        console.log("response", res);
                         toast.success('data add successfully')
+                        return res.data
                     }
                 })
         }

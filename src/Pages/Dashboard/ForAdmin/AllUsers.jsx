@@ -15,7 +15,7 @@ const AllUsers = () => {
     }
 
     const handleMakeChangeRole = (id, role) => {
-        fetch(`http://localhost:5000/users/role/${id}?role=${role}`, {
+        fetch(`https://summer-camp-server-ochre.vercel.app/users/role/${id}?role=${role}`, {
             method: 'PATCH',
         })
             .then(res => res.json())

@@ -8,7 +8,7 @@ export const saveUser = user => {
         gender: user?.gender,
         phone: user?.phone
     }
-    fetch(`http://localhost:5000/users/${user?.email}`, {
+    fetch(`https://summer-camp-server-ochre.vercel.app/users/${user?.email}`, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'
